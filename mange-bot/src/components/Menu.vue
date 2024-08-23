@@ -20,13 +20,14 @@ const flag = computed(()=> currentLanguage.value == 'br'?  'br.png' : 'en.png');
 
 <template>
     <header class="flex flex-row align-items-center justify-content-start">
-        <img src="/build-a-bot-logo.png" alt="robot logo">
+        <!-- <img src="/icon-robots.png" alt="robot logo"> -->
+        <img src="/robot-icon-2.png" alt="robot logo">
         <nav class="ml-5">
           <RouterLink class="m-4" to="/">{{ $t('MENU.HOME') }}</RouterLink>
           <RouterLink class="m-4" to="/cart">{{ $t('MENU.CART') }}</RouterLink>
           <RouterLink class="m-4" to="/build">{{ $t('MENU.BUILD') }}</RouterLink>
-          <img id="flag" :src="flag" alt="flag" @click="change">
         </nav>
+        <img id="flag" :src="flag" alt="flag" @click="change">
     </header>
 </template>
 
@@ -34,6 +35,7 @@ const flag = computed(()=> currentLanguage.value == 'br'?  'br.png' : 'en.png');
     header{
         height: 5rem;
         width: 40rem;
+        position: relative;
         img{
             margin-left: 4rem;
             height: 4rem;
@@ -47,9 +49,13 @@ const flag = computed(()=> currentLanguage.value == 'br'?  'br.png' : 'en.png');
             font-weight: bold;
         }
         #flag{
+          position: absolute;
+          right: 2.5rem;
+
           height: 2.5rem;  
           width: 3.5rem;
           cursor: pointer;
+          border-radius: 0.5rem;
         }
     }
 </style>

@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/proxy-api": {
-        target: 'https://mange-make.bot.azurewebsites.net',
+        target: 'https://mange-make-bot.azurewebsites.net',
         secure: false,
         changeOrigin: true,
         rewrite: (path)=> path.replace(/^\/proxy-api/,"")
