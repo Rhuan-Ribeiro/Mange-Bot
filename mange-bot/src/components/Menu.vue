@@ -21,7 +21,7 @@ const flag = computed(()=> currentLanguage.value == 'br'?  'br.png' : 'en.png');
 <template>
     <header class="flex flex-row align-items-center justify-content-start">
         <!-- <img src="/icon-robots.png" alt="robot logo"> -->
-        <img src="/robot-icon-2.png" alt="robot logo">
+        <RouterLink to="/"><img src="/robot-icon-2.png" alt="robot logo"></RouterLink>
         <nav class="ml-5">
           <RouterLink class="m-4" to="/">{{ $t('MENU.HOME') }}</RouterLink>
           <RouterLink class="m-4" to="/cart">{{ $t('MENU.CART') }}</RouterLink>
